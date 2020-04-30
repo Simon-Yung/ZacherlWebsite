@@ -16,7 +16,7 @@ body { display: flex; flex-direction: row; margin: 0; padding: 0; /*background-c
 
 .logo { height: 010vw; display: flex; justify-content: center; align-items: center; margin: 5%; padding: 0; border: 0px; border-left: 0.5vw solid #ffffff; border-top: 0.5vw solid #ffffff; z-index: 2; }
 
-.logo a { position: absolute; font: 700 4vw/0.9 "Montserrat", sans-serif; /*40px*/ text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.45); text-align: justify; color: #ffffff; letter-spacing: 5px; left: 15%; z-index: 2; }
+.logo a { position: absolute; font: 700 4vw/0.9 "Montserrat", sans-serif; /*40px*/ text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2),1px -1px 1px rgba(0, 0, 0, 0.2),1px 1px 1px rgba(0, 0, 0, 0.2),-1px -1px 1px rgba(0, 0, 0, 0.2); text-align: justify; color: #ffffff; letter-spacing: 5px; left: 15%; z-index: 2; }
 
 .logo:hover a { font: 700 3.8vw/0.9 "Montserrat", sans-serif; /*40px*/ transition: .3s ease; }
 
