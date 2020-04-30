@@ -12,17 +12,16 @@ body { display: flex; flex-direction: row; margin: 0; padding: 0; /*background-c
 .background_img { position: fixed; top: -2%; left: -2%; min-width: 104%; min-height: 104%; object-fit: cover; filter: blur(5px) opacity(95%) grayscale(100%); z-index: -1; }
 
 /*sidebar*/
-.sidebar_box { background-color: rgba(0, 0, 0, 0.9); flex: 20%; height: 100vh; border: 0px; margin: 0; padding: 0; position: sticky; top: 0px; background-size: cover; }
+.sidebar_box { background-color: rgba(0, 0, 0, 0.9); flex: 20%; height: 100vh; border: 0px; margin: 0; padding: 0; position: sticky; top: 0px; background-size: cover; z-index: 2; }
 
-.logo { height: 10vw; display: flex; justify-content: center; align-items: center; margin: 5%; border: 5px solid #ffffff; border-radius: 0px; }
+.logo { height: 010vw; display: flex; justify-content: center; align-items: center; margin: 5%; padding: 0; border: 0px; border-left: 0.5vw solid #ffffff; border-top: 0.5vw solid #ffffff; z-index: 2; }
 
-.logo a { font: 700 2.4vw "Montserrat", sans-serif; /*40px*/ text-align: justify; color: #ffffff; }
+.logo a { position: absolute; font: 700 4vw/0.9 "Montserrat", sans-serif; /*40px*/ text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.45); text-align: justify; color: #ffffff; letter-spacing: 5px; left: 15%; z-index: 2; }
 
-.logo:hover a { font: 700 2.3vw "Montserrat", sans-serif; /*40px*/ color: #ffffff; transition: .3s ease; }
+.logo:hover a { font: 700 3.8vw/0.9 "Montserrat", sans-serif; /*40px*/ transition: .3s ease; }
 
 /*bar for sidebar*/
-bar { display: block; background-color: #ffffff; width: 90%; height: 20px; margin: 5%; }
-
+/*bar { unused display: block; background-color: #ffffff; width: 90%; height: 20px; margin: 5%; }*/
 /*navmenu*/
 .nav_menu_box { width: 100%; padding: 0 6% 0 5%; min-width: 170px; }
 
@@ -58,14 +57,14 @@ bar { display: block; background-color: #ffffff; width: 90%; height: 20px; margi
 .front_page_video { width: 99%; margin: 0 1% 1% 1%; box-shadow: 2px 2px rgba(0, 0, 0, 0.1); }
 
 /* .video_container { display: block; position: relative; width: 100%; padding: 0; margin: 0; } .video_container video { width:100%; height: 100%; }*/
-.iframe_container { position: relative; overflow: hidden; height: 0%; padding-bottom: 55.25%; background-color: rgba(0, 0, 0, 0.9); width: 99%; margin: 0 0.5% 1% 0.5%; }
+.iframe_container { position: relative; overflow: hidden; height: 0%; padding-bottom: 55.25%; background-color: rgba(0, 0, 0, 0.9); width: 99%; margin: 0 0.5% 1% 0.5%; z-index: 1; }
 
-iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; z-index: 1; }
 
 /*text formating*/
 .main_text_box { flex: 80%; display: flex; flex-direction: column; align-items: center; font: 400 16px "Montserrat", sans-serif; margin: 0; padding: 0; }
 
-.text_box { width: 98%; max-width: 50em; font: 400 16px "Montserrat", sans-serif; display: flex; flex-direction: column; background-color: #ffffff; margin: 0; padding: 10px; outline: 5px solid rgba(0, 0, 0, 0.1); }
+.text_box { width: 98%; max-width: 50em; font: 400 16px "Montserrat", sans-serif; display: flex; flex-direction: column; background-color: #ffffff; margin: 0; padding: 10px; outline: 5px solid rgba(0, 0, 0, 0.2); }
 
 .text_box .gallery { width: 100%; height: auto; display: flex; flex-direction: column; margin: 0; padding: 0; }
 
@@ -90,19 +89,19 @@ table { vertical-align: top; border: 0px; font: 400 16px/1.5 "Montserrat", sans-
 table tbody tr td { vertical-align: top; min-width: 20px; }
 
 /*----------------------modal stuff----------------------*/
-.modal_image { /*<-- image is the thumbnail change latter to fit*/ cursor: pointer; display: block; position: relative; width: 97%; margin: 0 1.5% 3% 1.5%; }
+.modal_image { /*<-- image is the thumbnail change latter to fit*/ cursor: pointer; display: block; position: relative; width: 97%; margin: 0 1.5% 3% 1.5%; z-index: 1; }
 
 .modal_image:hover { filter: brightness(0.6); transition: .3s ease; }
 
 /*----------------modal gallery----------------*/
 /* background */
-.modal { display: none; position: fixed; z-index: 1; padding: 0; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: #000000; /* Fallback color */ background-color: rgba(0, 0, 0, 0.9); vertical-align: middle; }
+.modal { display: none; position: fixed; z-index: 3; padding: 0; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: #000000; /* Fallback color */ background-color: rgba(0, 0, 0, 0.9); vertical-align: middle; }
 
 /* Modal Content (image) */
 .modal_content { margin: auto; display: block; width: 100%; height: 100%; object-fit: scale-down; /*to make it harder to download*/ /* also add draggable="false"; to it in html */ /* menu has been desactivated with js */ }
 
 /* Caption of Modal Image */
-#Caption { display: block; position: fixed; top: 10px; right: 190px; background: white; /*fallback*/ background-color: rgba(255, 255, 255, 0.6); padding: 10px; text-align: right; font: 400 16px/1 "Montserrat", sans-serif; color: #000000; z-index: 2; }
+#Caption { display: block; position: fixed; top: 10px; right: 190px; background: white; /*fallback*/ background-color: rgba(255, 255, 255, 0.6); padding: 10px; text-align: right; font: 400 16px/1 "Montserrat", sans-serif; color: #000000; }
 
 /* Add Animation */
 .modal_content, #caption { -webkit-animation-name: zoom; -webkit-animation-duration: 0.6s; animation-name: zoom; animation-duration: 0.6s; }
