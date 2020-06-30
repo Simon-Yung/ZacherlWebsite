@@ -7,12 +7,12 @@ p, b { white-space: normal; }
 
 a { text-decoration: none; }
 
-body { display: flex; flex-direction: row; margin: 0; padding: 0; /*background-color: #F0EEE7;*/ }
+body { min-height:100%; display: flex; flex-direction: row; margin: 0; padding: 0; /*background-color: #F0EEE7;*/ }
 
 .background_img { position: fixed; top: -2%; left: -2%; min-width: 104%; min-height: 104%; object-fit: cover; filter: blur(5px) opacity(95%) grayscale(100%); z-index: -1; }
 
 /*sidebar*/
-.sidebar_box { height:100%; background-color: rgba(0, 0, 0, 0.9); flex: 20%; height: auto; border: 0px; margin: 0; padding: 0; position: sticky; top: 0px; background-size: cover; z-index: 2; }
+.sidebar_box { height:100%; background-color: rgba(0, 0, 0, 0.9); flex: 20%; border: 0px; margin: 0; padding: 0; position: sticky; top: 0px; background-size: cover; z-index: 2; }
 
 .logo { height: 010vw; display: flex; justify-content: center; align-items: center; margin: 5%; padding: 0; border: 0px; border-left: 0.5vw solid #ffffff; border-top: 0.5vw solid #ffffff; z-index: 2; }
 
