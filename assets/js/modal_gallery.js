@@ -16,6 +16,7 @@ function openModalGallery(imageIDNumber) {
   var captionText = document.getElementById("Caption");
   modal.style.display = "flex";
   captionText.innerHTML = img.alt;
+  modalImg.src = "/assets/images/load.gif";
   modalImg.src = img.src.replace("/thumbnails", "/larges");
 }
 
@@ -30,6 +31,7 @@ function nextModal(n) {
   var captionText = document.getElementById("Caption");
   modal.style.display = "flex";
   //modalImg.src = img.src;
+  modalImg.src = "/assets/images/load.gif";
   modalImg.src = img.src.replace("/thumbnails", "/larges");
   captionText.innerHTML = img.alt;
 }
